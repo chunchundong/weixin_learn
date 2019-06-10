@@ -1,0 +1,48 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/phone/phone",
+    "pages/contacts/contacts",
+    "pages/login/index",
+    "pages/detail/index",
+    "pages/about/index",
+    "pages/common/common",
+    "pages/logs/logs"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#000",
+    "navigationBarTitleText": "冬冬的小程序",
+    "navigationBarTextStyle": "white",
+    "enablePullDownRefresh": true,
+    "backgroundColor": "#ccc"
+  },
+  "sitemapLocation": "sitemap.json",
+  "tabBar":{
+    "color": "#000000",
+    "selectedColor": "#1296db",
+    "borderStyle": "black",
+    "list":[
+      {
+        "text":"电影优惠",
+        "pagePath":"pages/index/index",
+        "iconPath":"pages/image/index.png",
+        "selectedIconPath":"pages/image/index_selected.png"
+      },
+      {
+        "text":"关于会员",
+        "pagePath":"pages/about/index",
+        "iconPath": "pages/image/vip.png",
+        "selectedIconPath": "pages/image/vip_selected.png"
+      },
+      {
+        "text":"联系人",
+        "pagePath":"pages/contacts/contacts"
+      },
+      {
+        "text": "手机型号",
+        "pagePath": "pages/phone/phone"
+      }
+    ]
+  }
+}

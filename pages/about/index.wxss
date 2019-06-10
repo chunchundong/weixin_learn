@@ -1,0 +1,28 @@
+/* pages/about/index.wxss */
+.style{
+  color: green
+}
+scroll-view{
+  height: 300rpx;
+  white-space: nowrap; /*横向滚动时添加 */
+}
+.section view{
+  width: 100%;
+  /* height: 300rpx; */
+  text-align: center;
+  line-height: 300rpx;
+  color: white;
+  display: inline-block; /*横向滚动时添加 */
+}
+.a{
+  background-color: red
+}
+.b{
+  background-color: blue
+}
+.c{
+  background-color: gold
+}
+.music button{
+  margin: 0 10rpx;
+}

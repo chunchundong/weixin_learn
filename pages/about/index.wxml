@@ -1,0 +1,32 @@
+<!--pages/about/index.wxml-->
+<!-- 手动滑动 -->
+<view class='section'>
+  <scroll-view scroll-y="true" bindscrolltoupper="upper" bindscrolltolower="lower">
+    <view class='a'>a</view>
+    <view class='b'>b</view>
+    <view class='c'>c</view>
+  </scroll-view>
+</view>
+
+<!-- 点击跳转 -->
+<button bindtap='showMsg'>点击跳转到详情页</button>
+<navigator url='/pages/detail/index' hover-class='style'>点击查看详情</navigator>
+<navigator url='/pages/detail/index' open-type='redirectTo'>点击查看详情</navigator>
+
+<!-- 播放音乐 -->
+<audio
+  poster="{{poster}}"
+  name="{{name}}"
+  author="{{author}}"
+  src="{{src}}"
+  id="myAudio"
+  controls
+  loop
+></audio>
+<view class='music'>
+  <button type="primary" bindtap="audioPlay" size='mini'>播放</button>
+  <button type="primary" bindtap="audioPause" size='mini'>暂停</button>
+  <button type="primary" bindtap="audio14" size='mini'>设置当前播放时间为35秒</button>
+  <button type="primary" bindtap="audioStart" size='mini'>回到开头</button>
+  <slider show-value value='{{value}}' bindchange='changePlay'></slider>
+</view>

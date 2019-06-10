@@ -1,0 +1,3 @@
+<!--pages/login/index.wxml-->
+<text>我是登录页面</text>
+<button bindtap='toNavbar'>登录</button>

@@ -1,0 +1,8 @@
+<!--pages/contacts/contacts.wxml-->
+<view class='title'>添加联系人</view>
+<view class='content'>
+  <input type='text' placeholder='请输入联系人姓名' value='{{name}}' class='name' bindinput='changeName'></input>
+  <input type='text' placeholder='请输入联系人电话' value='{{phone}}' class='phone' bindinput='changePhone'></input>
+  <button type='primary' bindtap='saveContact'>保存联系人</button>
+  <button type='primary' bindtap='clearContact'>清除联系人</button>
+</view>

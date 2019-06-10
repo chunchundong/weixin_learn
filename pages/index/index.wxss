@@ -1,0 +1,52 @@
+/**index.wxss**/
+.container text{
+  color: orangered
+}
+swiper-item{
+  width: 100%;
+}
+.slide-image{
+  width: 100%;
+}
+.selectPictures{
+  padding: 20rpx;
+}
+.selectPictures .choose{
+  display: flex;
+  flex-direction: row;
+  border: 1px solid gainsboro;
+  padding: 10rpx;
+}
+.selectPictures .choose .left{
+  flex: 2;
+}
+.selectPictures .choose .right{
+  flex: 4;
+}
+.preview{
+  border: 1px solid gainsboro;
+}
+.preview image{
+  width: 200rpx;
+  height: 200rpx;
+}
+.imgs{
+  display: flex;
+  flex-wrap: wrap;
+  float: left;
+  margin: 20rpx;
+}
+.imgs image{
+  width: 230rpx;
+  height: 230rpx;
+}
+.jianqieban{
+  margin: 20rpx;
+}
+.jianqieban input{
+  border: 1px solid green;
+  padding: 10rpx;
+}
+.jianqieban button{
+  margin-top: 20rpx;
+}

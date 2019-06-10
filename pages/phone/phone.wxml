@@ -1,0 +1,32 @@
+<!--pages/phone/phone.wxml-->
+<!-- 获取手机设备信息 -->
+<view class='box'>
+  <view>设备品牌: {{mobile.brand}}</view>
+  <view>设备型号: {{mobile.model}}</view>
+  <view>设备像素比: {{mobile.pixelRatio}}</view>
+  <view>微信设置的语言: {{mobile.language}}</view>
+  <view>微信版本号: {{mobile.version}}</view>
+  <view>操作系统及版本: {{mobile.system}}</view>
+  <view>客户端平台: {{mobile.platform}}</view>
+  <view>客户端基础库版本: {{mobile.SDKVersion}}</view>
+  <button type='primary' bindtap='getMsg'>获取手机信息</button>
+  <button type='primary' bindtap='downLoad'>点击下载</button>
+</view>
+
+<!-- 拨打电话 -->
+<view class='call'>
+  <view class='phone'>拨打电话</view>
+  <input bindinput='callPhone' placeholder='请输入电话号码'></input>
+  <button bindtap='makePhoneCall' type='primary'>拨打</button>
+</view>
+
+<!-- 扫描二维码 -->
+<view class='call'>
+  <view>所扫码的内容: {{result}}</view>
+  <view>所扫码的类型: {{scanType}}</view>
+  <view>所扫码的字符集: {{charSet}}</view>
+  <view>二维码携带的 path: {{path}}</view>
+  <view>原始数据，base64编码: {{rawData}}</view>
+  <button bindtap='scanCode' type='primary'>扫码</button>
+</view>
+

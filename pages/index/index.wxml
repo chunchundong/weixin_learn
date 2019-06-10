@@ -1,0 +1,114 @@
+<!--index.wxml-->
+<!-- 轮播图 -->
+<swiper indicator-dots="true" autoplay="true" interval="{{interval}}" duration="{{duration}}">
+  <block wx:for="{{imgUrls}}">
+    <swiper-item>
+      <image src="{{item}}" class="slide-image" />
+    </swiper-item>
+  </block>
+</swiper>
+
+<!-- 上传图片 -->
+<view class='selectPictures'>
+  <view class='choose'>
+    <view class='left'>图片来源</view>
+    <picker class='right' range='{{sourceType}}' value='{{sourceTypeIndex}}' bindchange='changeSource' model='selector'>
+      {{sourceType[sourceTypeIndex]}}
+    </picker>
+  </view>
+  <view class='choose'>
+    <view class='left'>图片质量</view>
+    <picker class='right' range='{{sizeType}}' value='{{sizeTypeIndex}}' bindchange='changeSize' model="selector">
+      {{sizeType[sizeTypeIndex]}}
+    </picker>
+  </view>
+  <view class='choose'>
+    <view class='left'>图片限制</view>
+    <picker class='right' range='{{count}}' value='{{countIndex}}' bindchange='changeCount' model="selector">
+      {{count[countIndex]}}
+    </picker>
+  </view>
+  <view class='preview'>
+    <view>图片预览: {{chosed}}/{{count[countIndex]}}</view>
+    <image src='../image/add.png' bindtap='chooseImg'></image>
+  </view>
+</view>
+<view class='imgs'>
+  <block wx:for="{{imgUrl}}" wx:key="this">
+    <image src='{{item}}' bindtap='showBigger' data-src='{{item}}'></image>
+  </block>
+</view>
+
+<!-- 复制粘贴 -->
+<view class='jianqieban'>
+  <input bindinput='text'></input>
+  <button bindtap='copy' type='primary'>复制到剪切板</button>
+  <button bindtap='past' type='primary'>粘贴</button>
+  <text>{{jieshou}}</text>
+</view>
+
+<!-- 关于录音 -->
+<view class='luying'>
+  <button bindtap='start'>开始录音</button>
+  <button bindtap='stopStart'>结束录音</button>
+  <button bindtap='play'>播放录音</button>
+  <button bindtap='stopPlay'>暂停播放</button>
+</view>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <progress percent="{{percent}}" show-info stroke-width="15" border-radius="15rpx"/>
+
+<form>
+<checkbox-group bindchange="checkboxChange">
+  <label class="checkbox">
+    <checkbox />
+    是否同意此协议
+  </label>
+</checkbox-group>
+<button type="primary" disabled='{{disabled}}'>注册</button>
+</form>
+
+<picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+    <view class="picker">当前选择：{{array[index]}}</view>
+</picker>
+
+<view class="container">
+  <text>{{name}}</text>
+  <button bindtap='change'>点击改变值</button>
+</view>
+
+<block wx:for="{{array}}" wx:key="this" wx:for-index="idx" wx:for-item="items">
+  //<view id='{{item.id}}'>{{item.id}}:{{item.message}}</view>
+  <view id='{{item.id}}'>{{idx}}:{{items.message}}</view>
+</block>
+
+<view wx:if="{{length>6}}">这是一个大于6的数字</view>
+<view wx:elif="{{length<6}}">这是一个小于6的数字</view>
+<view wx:else>这是一个等于6的数字</view>
+
+<template name="msg">
+  <view>{{name}}</view>
+  <view>{{age}}</view>
+  <view>{{sex}}</view>
+</template>
+
+<template is="msg" data="{{...msg}}" /> -->
